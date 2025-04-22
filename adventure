@@ -1,0 +1,42 @@
+def intro():
+    print("Welcome to the Adventure Game!")
+    print("You wake up in a dark forest with two paths.")
+    print("1. Take the left path")
+    print("2. Take the right path")
+    choice = input("What do you do? (1/2): ")
+    if choice == "1":
+        left_path()
+    elif choice == "2":
+        right_path()
+    else:
+        print("Invalid choice. Try again.")
+        intro()
+
+def left_path():
+    print("\nYou walk down the left path and find a river.")
+    print("1. Try to swim across")
+    print("2. Look for a bridge")
+    choice = input("What do you do? (1/2): ")
+    if choice == "1":
+        print("\nThe current is too strong. You drown. Game Over.")
+    elif choice == "2":
+        print("\nYou find a bridge and cross safely. You win!")
+    else:
+        print("Invalid choice. Try again.")
+        left_path()
+
+def right_path():
+    print("\nYou take the right path and see a bear!")
+    print("1. Run away")
+    print("2. Try to fight the bear")
+    choice = input("What do you do? (1/2): ")
+    if choice == "1":
+        print("\nYou run fast and escape. You survive!")
+    elif choice == "2":
+        print("\nThe bear is too strong. You lose.")
+    else:
+        print("Invalid choice. Try again.")
+        right_path()
+
+if __name__ == "__main__":
+    intro()
